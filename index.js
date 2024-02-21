@@ -1,13 +1,13 @@
 // Import packages
 const express = require("express");
-const moviesRouter = require("./routes/api/movies");
+const moviesRouter = require("./routes/movies");
 
 // Middlewares
 const app = express();
 app.use(express.json());
 
 // Routes
-app.use("/api/movies", moviesRouter);
+app.use("/movies", moviesRouter);
 
 // connection
 const port = process.env.PORT || 9001;
