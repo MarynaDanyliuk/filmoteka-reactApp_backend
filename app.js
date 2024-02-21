@@ -8,6 +8,10 @@ app.use(express.json());
 // Routes
 app.use("/movies", moviesRouter);
 
+// connection
+const port = process.env.PORT || 9001;
+app.listen(port, () => console.log(`Listening to port ${port}`));
+
 // app.use((req, res) => {
 //   res.status(404).json({ message: "Not found" });
 // });
