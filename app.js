@@ -1,4 +1,24 @@
-// const express = require("express");
+const express = require("express");
+const moviesRouter = require("./routes/movies");
+
+// Middlewares
+const app = express();
+app.use(express.json());
+
+// Routes
+app.use("/movies", moviesRouter);
+
+app.use((req, res) => {
+  res.status(404).json({ message: "Not found" });
+});
+
+app.use((err, req, res, next) => {
+  const { status = 500, message = "Server error" } = err;
+  res.status(status).json({ message });
+});
+
+module.exports = app;
+
 // const logger = require("morgan");
 // const cors = require("cors");
 
@@ -15,17 +35,6 @@
 
 // // app.use("/api/books", booksRouter);
 // app.use("/api/movies", moviesRouter);
-
-// app.use((req, res) => {
-//   res.status(404).json({ message: "Not found" });
-// });
-
-// app.use((err, req, res, next) => {
-//   const { status = 500, message = "Server error" } = err;
-//   res.status(status).json({ message });
-// });
-
-// module.exports = app;
 
 // const express = require("express");
 // const fs = require("fs/promises");
