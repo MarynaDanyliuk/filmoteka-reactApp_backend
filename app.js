@@ -8,14 +8,14 @@ app.use(express.json());
 // Routes
 app.use("/movies", moviesRouter);
 
-app.use((req, res) => {
-  res.status(404).json({ message: "Not found" });
-});
+// app.use((req, res) => {
+//   res.status(404).json({ message: "Not found" });
+// });
 
-app.use((err, req, res, next) => {
-  const { status = 500, message = "Server error" } = err;
-  res.status(status).json({ message });
-});
+// app.use((err, req, res, next) => {
+//   const { status = 500, message = "Server error" } = err;
+//   res.status(status).json({ message });
+// });
 
 // const port = process.env.PORT || 9001;
 // app.listen(port, () => console.log(`Listening to port ${port}`));
