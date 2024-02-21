@@ -9,6 +9,8 @@ router.get("/", async (req, res, next) => {
   return res.status(200).json(result);
 });
 
+module.exports = router;
+
 // title: "Express Testing",
 // message: "The app is working properly!",
 
@@ -27,5 +29,3 @@ router.get("/", async (req, res, next) => {
 // router.put("/:movieId", async (req, res, next) => {
 //   res.json({ message: "template message" });
 // });
-
-module.exports = router;
