@@ -7,11 +7,11 @@
     "node": "18.x"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=production node ./server.js",
     "start:dev": "cross-env NODE_ENV=development nodemon ./server.js",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js",
-    "test": "jest",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build"
   },
   "keywords": [],
