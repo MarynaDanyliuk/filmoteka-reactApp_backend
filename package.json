@@ -7,7 +7,7 @@
     "node": "18.x"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vercel/node": "^3.0.19",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.4",
