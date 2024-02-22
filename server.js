@@ -1,5 +1,11 @@
-const app = require("./app");
+// const app = require("./app");
+const express = require("express");
+const moviesRouter = require("./routes/api/movies");
 // const mongoose = require("mongoose");
+app.use(express.json());
+
+// Routes
+app.use("/api/movies", moviesRouter);
 
 const port = process.env.PORT || 9000;
 app.listen(port, () => console.log(`Listening to port ${port}`));
