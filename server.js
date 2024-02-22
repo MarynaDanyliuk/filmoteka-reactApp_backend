@@ -2,6 +2,9 @@
 const express = require("express");
 const moviesRouter = require("./routes/api/movies");
 // const mongoose = require("mongoose");
+
+// Middlewares
+const app = express();
 app.use(express.json());
 
 // Routes
