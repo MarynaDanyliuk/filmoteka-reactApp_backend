@@ -1,7 +1,6 @@
-// const app = require("./app");
+// Import packages
 const express = require("express");
 const moviesRouter = require("./routes/api/movies");
-// const mongoose = require("mongoose");
 
 // Middlewares
 const app = express();
@@ -10,7 +9,8 @@ app.use(express.json());
 // Routes
 app.use("/api/movies", moviesRouter);
 
-const port = process.env.PORT || 3000;
+// connection
+const port = process.env.PORT || 9001;
 app.listen(port, () => console.log(`Listening to port ${port}`));
 
 // const port = process.env.PORT || 3000;
