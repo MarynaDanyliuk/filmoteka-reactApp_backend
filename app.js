@@ -1,16 +1,16 @@
 const express = require("express");
-const moviesRouter = require("./routes/movies");
+const moviesRouter = require("./routes/api/movies");
 
 // Middlewares
 const app = express();
 app.use(express.json());
 
 // Routes
-app.use("/movies", moviesRouter);
+app.use("/api/movies", moviesRouter);
 
 // connection
-const port = process.env.PORT || 9001;
-app.listen(port, () => console.log(`Listening to port ${port}`));
+// const port = process.env.PORT || 3000;
+// app.listen(port, () => console.log(`Listening to port ${port}`));
 
 // app.use((req, res) => {
 //   res.status(404).json({ message: "Not found" });

@@ -5,8 +5,9 @@ const movies = require("../models/movies");
 const router = express.Router();
 
 router.get("/", async (req, res, next) => {
-  const result = await movies.listMovies();
-  return res.status(200).json(result);
+  console.log("все працює");
+  // const result = await movies.listMovies();
+  // return res.status(200).json(result);
 });
 
 module.exports = router;
